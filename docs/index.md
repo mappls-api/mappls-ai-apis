@@ -141,8 +141,9 @@ This API has more advance features  in compare with the face blurring API
 <br>
 
 
+
 #### Documentation
-[Contact API Support](mailto:apisupport@mapmyindia.com)
+[Click here](https://mapmyindia.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
 
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)

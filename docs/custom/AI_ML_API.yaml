@@ -1,0 +1,191 @@
+openapi: 3.0.1
+info:
+  title: mGIS AI ML API
+  description: |-
+    description: |-
+    *mGIS AI ML API provides the following functionality: <ul><li>Detection of the faces in the image.</li><li>Returns the location in form of bounding box of the detected faces in the image.</li><li>Blurring of the faces in the image.</li><br><br><br><hr><br>![MapmyIndia logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+
+    On a Mission to <b>"Make our world better through maps, location technologies & IoT"</b>, MapmyIndia is continuously enabling real time hyper-local information access through its map & location services. mGIS APIs are a part of mGIS platform and the document describes APIs usage and specifications for their integration into an application. The document covers :
+    <ul><li>List of APIs along with use cases</ul></li> 
+    <ul><li>Explanation of resources and query parameters</ul></li>
+    <ul><li>Listing of response structure and data type</ul></li>
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://mgis-api.mapmyindia.com/</code></li><li>
+     <b>UAT</b>:<code>https://mgis-preprod.mapmyindia.in/</code><li>  For example <code>https://mgis.mapmyindia.in/imageSegmentation </code> <br> To call our API, the endpoint requires access-token authorization and the <code>access-token</code> needs to be . For example <code>https://mgis-preprod.mapmyindia.in/example </code>Pass header as <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any issues or questions please submit it to our support : <a href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If you have some non-technical or commercial queries, contact your service account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: https://www.mapmyindia.com/api/#f_cont
+    email: apisupport@mapmyindia.com
+  termsOfService: https://www.mapmyindia.com/api/terms-&-conditions
+  version: V1.0.0
+  license:
+    name: Revised BSD-3 Clause
+    url: https://github.com/MapmyIndia/
+servers:
+  - url: https://mgis-api.mapmyindia.com/
+    description: Production server for mGIS APIs
+  - url: https://mgis-preprod.mapmyindia.in/
+    description: UAT server for mGIS APIs testing
+paths:
+  /facedetection:
+    post:
+      tags:
+        - Face Detection and Blurring
+      summary: Returns different output depending upon the inputs given.
+      description: 'Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate into their own application the power and full set of functionalities of the mGIS product and platform.<li> <b>It’s a fact:</b> people have a right of getting  digital privacy. <li><b>Here’s one more:</b> online publishers and businesses worldwide must respect those rights and provide visual anonymity when it’s needed. That’s why we decided to give you the fastest and easiest way to keep people’s privacy in photos. Meet Face Detection & Blurring  by MapmyIndia.
+          This tool completely automates Face Detection, Face Blurring in photos and helps you get the job done in just a few clicks without graphic editors and manual work. Keep reading to find out how it works, when it comes in handy, and how you can</li> actually use it in MapmyIndia.'
+      operationId: faceDetection
+      requestBody:
+        required: true
+        $ref: '#/components/requestBodies/faceBlur'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/facedetection'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  /faceplot:
+    post:
+      tags:
+        - Face Detection and Blurring
+      summary: Returns the image which contains objects of geometry of the detected face plotted on it with the bounding box.
+      description: This tool completely automates Face Detection, Face Blurring in photos and helps you get the job done in just a few clicks without graphic editors and manual work. Keep reading to find out how it works, when it comes in handy, and how you can actually use it in MapmyIndia. You can detect faces in an image, identify key facial features, and get the contours of detected faces. Note that the API detects faces, it does not recognize people . When you have face contour detection enabled, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
+      operationId: facePlot
+      requestBody:
+        required: true
+        $ref: '#/components/requestBodies/faceBlur'
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                $ref: '#/components/schemas/image_res'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  /faceblur:
+    post:
+      tags:
+        - Face Blurring
+      summary: 'Returns the array of features which contains objects of geometry of the uploaded image.'
+      description: Face Blur API can automatically detect all faces within an image and blurs them. No need for manual face selection.
+      operationId: faceBlur
+      requestBody:
+        required: true
+        $ref: '#/components/requestBodies/faceBlur'
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                $ref: '#/components/schemas/image_res'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+components:
+  requestBodies:
+    faceBlur:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+  schemas:
+    image_res:
+      title: Image result
+      type: string
+      example: Image
+    facedetection:
+      title: facedetection result
+      type: string
+      example:
+        - 0
+        - 0
+        - 1
+    ErrorObjectCommon:
+      title: ErrorObject 422
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '422'
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Bad request. Username not found.
+    ErrorObject400:
+      title: ErrorObject 400
+      type: object
+      properties:
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Mandatory Parameter Missing
+        code:
+          type: number
+          description: Error code.
+          example: 400
+    ErrorObject500:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '500'
+        error:
+          type: string
+          description: Different error messages that might have occured while making a particular request to the server
+          example: Something went wrong.
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
