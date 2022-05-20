@@ -25,6 +25,11 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 
 <br>
 
+- [Face Detection ](#face-detection )
+- [ Face plot](#face-plot)
+- [Face Blurring](#face-blurring)
+- [Object Detection](#object-detection)
+
 ## Face Detection 
 <br>
 When you have face contour detection enabled, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
@@ -110,11 +115,14 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 <br>
 
-# ALERT 
+
+
+# New Object blurring API.
+
+<br>
 <br>
 
-#  WANTS TO BLUR ANYTHING ON THE IMAGE ????  HERE IS BLURRING API
-<br>
+## Object Detection
 <br>
 
 # Introduction
