@@ -1,10 +1,10 @@
 
 [<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
 
-# MapmyIndia AI / ML APIs
+# MAPPLES AI / ML APIs
 
 ## Introduction
-Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API.
+Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
 
 
 ## Face Detection & Blurring API
@@ -24,6 +24,12 @@ You can detect faces in an image, identify key facial features, and get the cont
 Also, if you have any difficulties using this feature or suggestions on how we can improve the existing functionality, feel free to create a post in our Community Area.
 
 <br>
+
+- [Face Detection ](#face-detection )
+- [ Face plot](#face-plot)
+- [Face Blurring](#face-blurring)
+- [Object Detection](#object-detection)
+
 
 ## Face Detection 
 <br>
@@ -109,14 +115,14 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 <br>
 <br>
-
-# ALERT 
+ 
 <br>
 
-#  WANTS TO BLUR ANYTHING ON THE IMAGE ????  HERE IS BLURRING API
-<br>
-<br>
 
+# New Object blurring API.
+<br>
+<br>
+## Object Detection
 # Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
@@ -131,7 +137,7 @@ Thankfully, there’s a better (and easier!) way.
 
 Blur it out!
 
-A API to blur any kind of object on the image. User would give bounding box of the region he/she wants to blur and with it the image he wants the operation to be performed and our latest blurring  API would blur the specified region. 
+An API to blur any kind of object on the image. User would give bounding box of the region he/she wants to blur and with it the image he wants the operation to be performed and our latest blurring  API would blur the specified region. 
 <br>
 <br>
 
