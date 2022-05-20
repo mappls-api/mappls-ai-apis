@@ -1,5 +1,5 @@
 
-[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
+[![N|Solid](https://about.mappls.com/images/mappls-b-logo.svg)](https://www.mapmyindia.com/api/)
 
 # MAPPLS AI / ML APIs
 
@@ -158,7 +158,7 @@ This API has more advance features  in compare with the face blurring API
 <br>
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> ](https://www.mapmyindia.com/api)
+![](https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite)<br>
 Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
 
 
