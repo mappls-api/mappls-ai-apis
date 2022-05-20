@@ -1,7 +1,7 @@
 
-[<img src="https://www.mapmyindia.com/api/img/mapmyindia-api.png" height="40"/>](https://www.mapmyindia.com/api)
+[![N|Solid](https://about.mappls.com/images/mappls-b-logo.svg)](https://www.mapmyindia.com/api/)
 
-# MAPPLS AI / ML APIs
+# MAPPLES AI / ML APIs
 
 ## Introduction
 Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
@@ -28,7 +28,7 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 - [Face Detection ](#face-detection )
 - [ Face plot](#face-plot)
 - [Face Blurring](#face-blurring)
-- [Object Detection API](#object-detection-api)
+- [Object Detection](#object-detection)
 
 
 ## Face Detection 
@@ -119,12 +119,15 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 
 
+# New Object blurring API.
+<br>
+<br>
 
-## Object Detection API
+## Object Detection
 
 <br>
 
-## Introduction
+# Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
 
@@ -149,14 +152,14 @@ This API has more advance features  in compare with the face blurring API
 
 
 #### Documentation
-[Click here](https://mappls-api.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
+[Click here](https://mapmyindia.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
 
 <br>
 
 <br>
 For any queries and support, please contact: 
 
-[<img src="https://www.mapmyindia.com/images/logo.png" height="40"/> ](https://www.mapmyindia.com/api)
+![](https://cdn.mapmyindia.com/mappls_web/maps_widget_v2/images/mappls.svg?service=google_gsuite)<br>
 Email us at [apisupport@mapmyindia.com](mailto:apisupport@mapmyindia.com)
 
 
