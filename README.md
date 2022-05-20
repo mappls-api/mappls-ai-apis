@@ -122,7 +122,11 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 # New Object blurring API.
 <br>
 <br>
+
 ## Object Detection
+
+<br>
+
 # Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
