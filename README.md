@@ -28,7 +28,7 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 - [Face Detection ](#face-detection )
 - [ Face plot](#face-plot)
 - [Face Blurring](#face-blurring)
-- [Object Detection](#object-detection)
+- [Object Detection API](#object-detection-api)
 
 
 ## Face Detection 
@@ -119,15 +119,12 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 
 
-# New Object blurring API.
-<br>
-<br>
 
-## Object Detection
+## Object Detection API
 
 <br>
 
-# Introduction
+## Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
 
