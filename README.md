@@ -1,7 +1,7 @@
 
 [![N|Solid](https://about.mappls.com/images/mappls-b-logo.svg)](https://www.mapmyindia.com/api/)
 
-# MAPPLES AI / ML APIs
+# MAPPLS AI / ML APIs
 
 ## Introduction
 Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
