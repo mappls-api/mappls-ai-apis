@@ -1,5 +1,4 @@
-
-[<img src="https://about.mappls.com/images/mappls-b-logo.svg" height="60"/> </p>](https://www.mapmyindia.com/api)
+[<img src="https://about.mappls.com/images/mappls-logo.svg" height="60"/> </p>](https://about.mappls.com/api/)
 
 # MAPPLS AI / ML APIs
 
@@ -7,7 +6,7 @@
 Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API.
 
 
-## Face Detection & Blurring API
+### Face Detection & Blurring API
 
 It’s a fact: people have a right of getting  digital privacy. Here’s one more: online publishers and businesses worldwide must respect those rights and provide visual anonymity when it’s needed. That’s why we decided to give you the fastest and easiest way to keep people’s privacy in photos. Meet Face Detection & Blurring  by MapmyIndia.
 
@@ -28,9 +27,9 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 - [Face Detection ](#face-detection )
 - [ Face plot](#face-plot)
 - [Face Blurring](#face-blurring)
-- [Object Detection](#object-detection)
+- [Object Detection](#object-detection-api)
 
-## Face Detection 
+### Face Detection 
 <br>
 When you have face contour detection enabled, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
 <br>
@@ -40,7 +39,7 @@ When you have face contour detection enabled, you also get a list of points for 
      width="800px" style="margin-left:auto;margin-right:auto" />
 <br>
 
-## Face plot 
+### Face plot 
 
 <br>
 
@@ -56,7 +55,7 @@ Try face detection below. You can use the your own image in its place. Send the 
 
 
 
-## Face Blurring
+### Face Blurring
 <br>
 Face Blur API can automatically detect all faces within an image and blurs them.
 No need for manual face selection.
@@ -82,7 +81,7 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 6. Is It possible to Blur the image by giving the  boxes where the face lies ?
 <br>
 
-## Features Highlights
+### Features Highlights
 <br>
 
 1. Helps find missing people
@@ -92,7 +91,7 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 5. Improves photo organizations
 <br>
 
-## How Algorithm Works
+### How Algorithm Works
 <br>
 
 First, the API takes input as an image. If the end user wants face detection then an image with bounding box on the faces would be displayed. However, if the end user wants face blurring then face blurred image would be displayed in the API as an output. the algorithm adds a layer that blurs them out with Gaussian Blurring (also known as smoothing), which reduces image details so that facial features can no longer be seen by the human eye.
@@ -103,7 +102,7 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 <br>
 
-## SNAPSHOT(s)
+### SNAPSHOT(s)
 
 <img src="./images/facedetection_API.png"
      alt="Markdown Monster icon"
@@ -113,19 +112,13 @@ All operations are done with MapmyIndia Face Detection & Blurring API and take j
 <br>
 <br>
 <br>
-<br>
 
 
 
-# New Object blurring API.
+## Object Detection API
 
-<br>
-<br>
 
-## Object Detection
-<br>
-
-# Introduction
+### Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
 
@@ -151,7 +144,7 @@ This API has more advance features  in compare with the face blurring API
 
 
 #### Documentation
-[Click here](https://mapmyindia.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
+[Click here](https://mappls.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
 
 
 ### [See Video Demo](https://www.mapmyindia.com/api/mgis-api/images/mgis/data-operation.mp4)
