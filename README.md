@@ -42,10 +42,6 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 When you have face contour detection enabled, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
 <br>
 
-<img src="./docs/images/facedete.png"alt="Markdown Monster icon"
-     width="1000px" style="margin-left:auto;margin-right:auto" />
-<br>
-
 ## Face plot 
 
 <br>
@@ -179,6 +175,7 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 ## License Plate Detection 
 <br>
 When you have license plate contour detection enabled, you also get a list of points for each License Plate feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a license plate.
+
 <br>
 
 <img src="./docs/images/lp_box_response.png"alt="Markdown Monster icon"
@@ -220,12 +217,14 @@ Get up and running quickly. Implement License Plate Blur API in your stack with 
 
 ## License Plate Detection - Panoramas
 <br>
-To find the license plate contour features in panaramas, try box api, its sample results will be as below: 
+To find the license plate contour features in panaramas, try box api, its sample results will be as below:
+
 <br>
 
 <img src="./docs/images/lp_pano_box_reponse.png"
      alt="Markdown Monster icon"
      width="1105px" style="margin-left:auto;margin-right:auto" />
+     
 <br>
 
 ## License Plate plot - Panoramas
