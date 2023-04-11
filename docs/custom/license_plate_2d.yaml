@@ -1,0 +1,251 @@
+openapi: 3.0.1
+info:
+  title: AI ML API
+  description: >-
+    description: |-
+
+    * These API provides the following functionality: <ul><li>It will provide
+    the License Plate bounding box, License Plate blurred images, and draw the
+    box for License Plate in any image with only one image input. </li><li>It
+    will provide the privacy to vehicles.<br><br><br><hr><br>![MapmyIndia
+    logo](https://www.mapmyindia.com/api/img/mapmyindia-api.png)
+
+
+    On a Mission to <b>"Make our world better through maps, location
+    technologies & IoT"</b>, MapmyIndia is continuously enabling real time
+    hyper-local information access through its map & location services. AI ML
+    APIs are a part of mGIS platform and the document describes APIs usage and
+    specifications for their integration into an application. The document
+    covers :
+
+    <ul><li>List of APIs along with use cases</ul></li> 
+
+    <ul><li>Explanation of resources and query parameters</ul></li>
+
+    <ul><li>Listing of response structure and data type</ul></li>
+
+
+    ## Important notes
+     <ul><li><b>URLs</b>: the urls to use for UAT and Production are:  <ul><li>
+     <b>Production</b>:
+    <code>https://aiml.mappls.com/</code></li><li>  For example
+    <code>https://aiml.mappls.com/license_plate_detection </code> <br> To call
+    our API, the endpoint requires access-token authorization and the
+    <code>access-token</code> needs to be . For example
+    <code>https://mgis-preprod.mapmyindia.in/example </code>Pass header as
+    <code>Authorization:Bearer access_token</code>   </li> </ul> <li>For any
+    issues or questions please submit it to our support : <a
+    href="mailto:apisupport@mapmyindia.com" target="_blank">API Support</a>.  If
+    you have some non-technical or commercial queries, contact your service
+    account manager</li></ul>
+  contact:
+    name: MapmyIndia API Support
+    url: https://www.mapmyindia.com/api/#f_cont
+    email: apisupport@mapmyindia.com
+  termsOfService: https://www.mapmyindia.com/api/terms-&-conditions
+  version: V1.0.0
+  license:
+    name: Revised BSD-3 Clause
+    url: https://github.com/MapmyIndia/
+tags:
+  - name: License Plate Detection and Blurring 2D API
+    description: >-
+      It will allow the user to maintain privacy. Depending on the requirements,
+      the user may obtain License Plate blurred images, the bounding box of
+      detected License Plate, or drawn box around the License Plate of 2D
+      images.
+servers:
+  - url: https://aiml.mappls.com/
+    description: Production server for AI ML APIs
+paths:
+  /license_plate_detection:
+    post:
+      tags:
+        - License Plate Detection and Blurring 2D API
+      summary: Returns the bounding box array for the inputs Image
+      description: >-
+        API will predict the bounding box co-ordinates(x1, y1, x2, y2) i.e (left
+        most coordinate, right most coordinate) of the License Plate in the
+        given 2D image.
+      operationId: describeDatasetGet
+      requestBody:
+        $ref: '#/components/requestBodies/panofacebox'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/describeDatasetRes_2'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  /license_plate_blur:
+    post:
+      tags:
+        - License Plate Detection and Blurring 2D API
+      summary: Returns the License Plate blured images of the uploaded 2D image
+      description: >-
+        This API completely automates License Plate Detection, License Plate
+        Blurring in 2D Images, without any extra effort
+      operationId: describeDataset1
+      requestBody:
+        $ref: '#/components/requestBodies/panofaceblur'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/describeDatasetRes_1'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+  /license_plate_draw:
+    post:
+      tags:
+        - License Plate Detection and Blurring 2D API
+      summary: Returns the box drawn License Plate on the uploaded 2D image
+      description: >-
+        This API detects License Plate in 2D images and draw their box around
+        License Plate.
+      operationId: describeDataset2
+      requestBody:
+        $ref: '#/components/requestBodies/panofacedraw'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/describeDatasetRes_1'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
+components:
+  requestBodies:
+    panofaceblur:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+    panofacebox:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+    panofacedraw:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+            required:
+              - file
+  schemas:
+    describeDatasetRes_1:
+      title: result
+      type: string
+      example: Image
+    describeDatasetRes_2:
+      title: result
+      type: object
+      properties:
+        Prediction:
+          type: array
+          items:
+            type: object
+            properties:
+              x1:
+                type: integer
+                example: 1
+              y1:
+                type: integer
+                example: 1
+              x2:
+                type: integer
+                example: 1
+              y2:
+                type: integer
+                example: 1
+    ErrorObject400:
+      title: Request ErrorObject
+      type: object
+      properties:
+        error:
+          type: string
+          description: Client side error, Invalid parameter request
+          example: Mandatory Parameter Missing
+        code:
+          type: number
+          description: Error code.
+          example: 400
+    ErrorObject500:
+      title: Internal Server ErrorObject
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code.
+          example: '500'
+        error:
+          type: string
+          description: >-
+            Different error messages that might have occurred while making a
+            particular request to the server
+          example: Something went wrong.
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: token
+security:
+  - ApiKeyAuth: []
