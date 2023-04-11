@@ -149,6 +149,36 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorObject500'
       deprecated: false
+  /blurbox:
+    post:
+      tags:
+        - Blurring Bbox
+      summary: 'Returns the image in which objects of geometry are blurred as given by the client.'
+      description: BlurBox API takes in the bounding box ( the region, area the client want to blur in the image) and then the BlurBox will automatically return the  blur region within an image.
+      operationId: blurbox
+      requestBody:
+        required: true
+        $ref: '#/components/requestBodies/blurbox'
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                $ref: '#/components/schemas/image_res'
+        '400':
+          description: Bad Request, User made an error while creating a valid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject400'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorObject500'
+      deprecated: false
 components:
   requestBodies:
     panofaceblur:
@@ -163,6 +193,22 @@ components:
                 format: binary
             required:
               - file
+    blurbox:
+      content:
+        multipart/form-data:
+          schema:
+            type: object
+            properties:
+              file:
+                description: Image file in .jpg, .jpeg and .png formats
+                type: string
+                format: binary
+              box:
+                description: Takes bounding boxes of the region you want to blur.
+                type: string
+            required:
+              - file
+              - box
     panofacebox:
       content:
         multipart/form-data:
@@ -188,6 +234,10 @@ components:
             required:
               - file
   schemas:
+    image_res:
+      title: Image result
+      type: string
+      example: Image
     describeDatasetRes_1:
       title: result
       type: string
