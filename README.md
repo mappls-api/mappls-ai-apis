@@ -84,7 +84,7 @@ Get up and running quickly. Implement Face Blur API in your stack with just one 
 When you have face contour detection enabled on panoramas, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
 <br>
 
-<img src=".docs/images/face_pano_box.png"
+<img src="./docs/images/face_pano_box.png"
      alt="Markdown Monster icon"
      width="1105px" style="margin-left:auto;margin-right:auto" />
 <br>
@@ -168,12 +168,12 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 
 <br>
 
-- [License Plate Detection ](#License Plate-detection )
-- [ License Plate plot](#license-plot)
-- [License Plate Blurring](#License plate-blurring)
-- [License Plate Detection - Panoramas ](#License Plate-detection )
-- [ License Plate plot - Panoramas](#license-plot)
-- [License Plate Blurring - Panoramas](#License plate-blurring)
+- [License Plate Detection](#license-plate-detection)
+- [License Plate plot](#license-plate-plot)
+- [License Plate Blurring](#license-plate-blurring)
+- [License Plate Detection - Panoramas](#license-plate-detection)
+- [License Plate Plot - Panoramas](#license-plate-plot)
+- [License Plate Blurring - Panoramas](#license-plate-blurring)
 
 
 ## License Plate Detection 
@@ -299,17 +299,19 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 
 <br>
 
-- [Brand Detection ](#Brand-detection )
-- [ Brand classes](#Brand Details)
+- [Brand Detection](#brand-detection)
+- [Brand Details](#brand-details)
 
 
 <br>
+
 ## Brand Detection 
 <br>
 To detect brands like petrol pumps, banks etc, try following API which gives contour points of the brands detection boxes in image.
+
 <br>
 
-<img src="./docs/images/facedete.png"alt="Markdown Monster icon"
+<img src="./docs/images/brand_box.png"alt="Markdown Monster icon"
      width="800px" style="margin-left:auto;margin-right:auto" />
 <br>
 
@@ -345,14 +347,12 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 
 
 # New Object blurring API.
-<br>
-<br>
+
 
 ## Object Detection
 
-<br>
 
-# Introduction
+## Introduction
 <br>
 Sending visuals that include customers’ personal information, employee data, or company secrets can lead to a multitude of issues. In fact, many countries (and even individual states) have laws that govern how personally identifiable information can be shared both inside and outside your organization.
 
@@ -377,8 +377,7 @@ This API has more advance features  in compare with the face blurring API
 
 
 #### Documentation
-[Click here](https://mappls-api.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
-
+[Click here](https://mapmyindia.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
 
 <br>
 
