@@ -6,6 +6,10 @@
 ## Introduction
 Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
 
+- [Face Detection & Blurring API](#face-detection--blurring-api )
+- [License Plate Detection & Blurring API](#license-plate-detection--blurring-api)
+- [Brand Detection API](#brand-detection-api)
+- [New Object blurring API](#new-object-blurring-api)
 
 ## Face Detection & Blurring API
 
@@ -28,7 +32,9 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 - [Face Detection ](#face-detection )
 - [ Face plot](#face-plot)
 - [Face Blurring](#face-blurring)
-- [Object Detection](#object-detection)
+- [Face Detection - Panoramas ](#face-detection---panoramas )
+- [ Face plot - Panoramas](#face-plot---panoramas)
+- [Face Blurring - Panoramas](#face-blurring---panoramas)
 
 
 ## Face Detection 
@@ -36,9 +42,8 @@ Also, if you have any difficulties using this feature or suggestions on how we c
 When you have face contour detection enabled, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
 <br>
 
-<img src="./docs/images/facedete.png"
-     alt="Markdown Monster icon"
-     width="800px" style="margin-left:auto;margin-right:auto" />
+<img src="./docs/images/facedete.png"alt="Markdown Monster icon"
+     width="1000px" style="margin-left:auto;margin-right:auto" />
 <br>
 
 ## Face plot 
@@ -73,6 +78,51 @@ Get up and running quickly. Implement Face Blur API in your stack with just one 
 <br>
 
 
+
+## Face Detection - Panoramas
+<br>
+When you have face contour detection enabled on panoramas, you also get a list of points for each facial feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a face.
+<br>
+
+<img src=".docs/images/face_pano_box.png"
+     alt="Markdown Monster icon"
+     width="1105px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+## Face plot - Panoramas
+
+<br>
+
+Try face detection below for panoramas. You can use the your own image in its place. Send the request to the API. The sample Result are  potrayed down below.
+
+<br>
+
+<img src="./docs/images/pano_face_draw.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+
+<br>
+
+
+
+## Face Blurring - Panoramas
+<br>
+Face Blur API can automatically detect all faces within panoramas and blurs them.
+No need for manual face selection.
+
+Get up and running quickly. Implement Face Blur API in your stack with just one API call.
+
+
+<br>
+
+<img src="./docs/images/face_pano_blur.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+
+
+
 This API Answers to every Question  regarding face Detection & Blurring, such as :
 
 1. Are there any faces of Human in the Image?
@@ -83,8 +133,8 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 6. Is It possible to Blur the image by giving the  boxes where the face lies ?
 <br>
 
-## Features Highlights
-<br>
+### Features Highlights
+
 
 1. Helps find missing people
 2. Protects businesses against theft
@@ -92,30 +142,205 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 4. Reduces the number of touchpoints
 5. Improves photo organizations
 <br>
-
-## How Algorithm Works
+<br>
 <br>
 
-First, the API takes input as an image. If the end user wants face detection then an image with bounding box on the faces would be displayed. However, if the end user wants face blurring then face blurred image would be displayed in the API as an output. the algorithm adds a layer that blurs them out with Gaussian Blurring (also known as smoothing), which reduces image details so that facial features can no longer be seen by the human eye.
+
+
+
+
+## License Plate Detection & Blurring API
+
+Using these APIs anybody can detect and blur the license plate in panorama image. These APIs allow our client to use the power of Automatic License Plate detection from panorama Image and Finding ROI( Region of Interest) of License Plate as per the client requirement.
+This model has been implemented on Yolo_v5 model that effectively detect License Plate area by exploring each object region.
+
+<img src="./docs/images/license_2d.gif?raw=true" width="1000px" style="margin-left:auto;margin-right:auto"/>
+
 <br>
 
-To test the application, upload a JPG, PNG file containing at least one face into the API. After a few seconds, the destination bucket contains the output file, with the same name. The output file shows blur content when the faces are detected:
+This tool completely automates License Plate Detection, License Blurring in photos and helps you get the job done in just a few clicks without graphic editors and manual work. Keep reading to find out how it works, when it comes in handy, and how you can actually use it in MapmyIndia.
+
+<br>
+
+You can detect License plates in an image, identify key its features, and get the contours of detected License plates.
+
+Also, if you have any difficulties using this feature or suggestions on how we can improve the existing functionality, feel free to create a post in our Community Area.
+
+<br>
+
+- [License Plate Detection ](#License Plate-detection )
+- [ License Plate plot](#license-plot)
+- [License Plate Blurring](#License plate-blurring)
+- [License Plate Detection - Panoramas ](#License Plate-detection )
+- [ License Plate plot - Panoramas](#license-plot)
+- [License Plate Blurring - Panoramas](#License plate-blurring)
+
+
+## License Plate Detection 
+<br>
+When you have license plate contour detection enabled, you also get a list of points for each License Plate feature that was detected. These points represent the shape of the feature. The following image illustrates how these points map to a license plate.
+<br>
+
+<img src="./docs/images/lp_box_response.png"alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+## License Plate plot 
+
+<br>
+
+Try license plate detection below. You can use the your own image in its place. Send the request to the API. The sample Result are  potrayed down below.
+
+<br>
+
+<img src="./docs/images/license_2d_draw.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+
+<br>
+
+
+
+## License Plate Blurring
+<br>
+License Plate Blur API can automatically detect all faces within an image and blurs them.
+No need for manual face selection.
+
+Get up and running quickly. Implement License Plate Blur API in your stack with just one API call.
+
+
+<br>
+
+<img src="./docs/images/license_2d_blur.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+
+
+## License Plate Detection - Panoramas
+<br>
+To find the license plate contour features in panaramas, try box api, its sample results will be as below: 
+<br>
+
+<img src="./docs/images/lp_pano_box_reponse.png"
+     alt="Markdown Monster icon"
+     width="1105px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+## License Plate plot - Panoramas
+
+<br>
+
+Try license plate detection below. You can use the your own image in its place. Send the request to the API. The sample Result are  potrayed down below.
+
+<br>
+
+<img src="./docs/images/license_pano_draw.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+
+<br>
+
+
+
+## License Plate Blurring - Panoramas
+<br>
+License Plate Blur API can automatically detect all license plates within an image and blurs them.
+No need for manual selection.
+
+Get up and running quickly. Implement Face Blur API in your stack with just one API call.
+
+
+<br>
+
+<img src="./docs/images/license_pano_blur.png"
+     alt="Markdown Monster icon"
+     width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+
+
+
+### How Algorithm Works
+<br>
+
+First, the API takes input as an image. If the end user wants face/license plate detection then an image with bounding box on the faces/license plates would be displayed. However, if the end user wants face/license plate blurring then blurred image would be displayed in the API as an output. the algorithm adds a layer that blurs them out with Gaussian Blurring (also known as smoothing), which reduces image details so that facial/license plate features can no longer be seen by the human eye.
+<br>
+
+To test the application, upload a JPG, PNG file containing at least one face/license plate into the API. After a few seconds, the destination bucket contains the output file, with the same name. The output file shows blur content when the objects are detected:
 All operations are done with MapmyIndia Face Detection & Blurring API and take just a few minutes to set up.
 <br>
 <br>
 
-## SNAPSHOT(s)
 
-<img src="./docs/images/facedetection_API.png"
-     alt="Markdown Monster icon"
+<br>
+
+
+
+
+
+## Brand Detection API
+
+Using these APIs Data Team can fully leverage and embed the power of AI Based Brand Detection from seen imagery data and Finding ROI( Region of Interest) of Detected brand detection as per the their own requirement.These ROI could be downloaded as a CSV file and used for data extraction.
+
+This model has been implemented on YOLOv5 model that effectively detect Brand Detection. High robustness in real complex scenarios such as in cloudy, sunny, rainy and at night is achieved. Real-time detection upto 33 frames per second.
+
+<img src="./docs/images/brand.gif?raw=true" width="1000px" style="margin-left:auto;margin-right:auto"/>
+
+<br>
+
+
+<br>
+
+You can detect faces in an image, identify key facial features, and get the contours of detected faces. Note that the API detects faces, it does not recognize people .
+
+Also, if you have any difficulties using this feature or suggestions on how we can improve the existing functionality, feel free to create a post in our Community Area.
+
+<br>
+
+- [Brand Detection ](#Brand-detection )
+- [ Brand classes](#Brand Details)
+
+
+<br>
+## Brand Detection 
+<br>
+To detect brands like petrol pumps, banks etc, try following API which gives contour points of the brands detection boxes in image.
+<br>
+
+<img src="./docs/images/facedete.png"alt="Markdown Monster icon"
      width="800px" style="margin-left:auto;margin-right:auto" />
+<br>
+
+## Brand Details
+
+<br>
+
+Major brands detected under this APIs are:
+1. Indian Oil 
+2. Bharat Petroleum 
+3. Hindustan Petroleum 
+4. Essar Petroleum 
+5. Axis Bank 
+6. ICICI Bank 
+7. HDFC Bank 
+8. State Bank Of India 
+9. Canara Bank
 
 
-<br>
-<br>
-<br>
-<br>
- 
+## Features Highlights
+
+
+This API Answers to every Question  regarding face Detection & Blurring, such as :
+1. Accuracy: The API has high accuracy in detecting license plates in various lighting conditions, angles, and distances.
+2. Speed: The API provides fast and real-time processing of images for quick responses.
+3. Scalability: The API is able to handle multiple requests simultaneously and scale up or down depending on demand.
+4. Security: The API ensures the privacy and security of user data and protects against potential attacks.
+5. Error Handling: The API provides meaningful error messages in case of input validation failures or other errors.
+6. Robustness: The API is able to detect license plates under various conditions such as low-resolution images, partial occlusion, and varying aspect ratios.
+7. Customization: The API allows for fine-tuning or customization of the license plate detection model according to specific use cases or domains.
+8. Integration: The API is easy to integrate into different systems and platforms using standard communication protocols such as REST API or JSON.
 <br>
 
 
@@ -154,6 +379,7 @@ This API has more advance features  in compare with the face blurring API
 #### Documentation
 [Click here](https://mappls-api.github.io/mappls-ai-apis/mgis-apis.html?urls.primaryName=Face%20Detection%20API%20%3E%20AI%2FML%20API)
 
+
 <br>
 
 <br>
@@ -184,3 +410,4 @@ Need support? contact us!
 <div align="center"> <a href="https://about.mappls.com/api/terms-&-conditions">Terms & Conditions</a> | <a href="https://about.mappls.com/about/privacy-policy">Privacy Policy</a> | <a href="https://about.mappls.com/pdf/mapmyIndia-sustainability-policy-healt-labour-rules-supplir-sustainability.pdf">Supplier Sustainability Policy</a> | <a href="https://about.mappls.com/pdf/Health-Safety-Management.pdf">Health & Safety Policy</a> | <a href="https://about.mappls.com/pdf/Environment-Sustainability-Policy-CSR-Report.pdf">Environmental Policy & CSR Report</a>
 
 <div align="center">Customer Care: +91-9999333223</div>
+</div>
