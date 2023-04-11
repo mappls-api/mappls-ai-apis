@@ -178,7 +178,7 @@ When you have license plate contour detection enabled, you also get a list of po
 
 <br>
 
-<img src="./docs/images/lp_box_response.png"alt="Markdown Monster icon"
+<img src="./docs/images/lp_box_response.png" alt="Markdown Monster icon"
      width="800px" style="margin-left:auto;margin-right:auto" />
 <br>
 
@@ -310,7 +310,7 @@ To detect brands like petrol pumps, banks etc, try following API which gives con
 
 <br>
 
-<img src="./docs/images/brand_box.png"alt="Markdown Monster icon"
+<img src="./docs/images/brand_box.png" alt="Markdown Monster icon"
      width="800px" style="margin-left:auto;margin-right:auto" />
 <br>
 
