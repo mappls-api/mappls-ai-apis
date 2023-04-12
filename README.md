@@ -4,7 +4,7 @@
 # MAPPLS AI / ML APIs
 
 ## Introduction
-Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
+Using these APIs developers can fully leverage and embed the power of AI / ML Analytics,  intelligence. These APIs allow our client to integrate  the power of detection and blurring faces/license plates as per the their own requirement and full set of functionalities via this API. Moreover, A new API which has the feature of blurring the object as the user/ Client needs.
 
 - [Face Detection & Blurring API](#face-detection--blurring-api )
 - [License Plate Detection & Blurring API](#license-plate-detection--blurring-api)
@@ -147,7 +147,7 @@ This API Answers to every Question  regarding face Detection & Blurring, such as
 
 ## License Plate Detection & Blurring API
 
-Using these APIs anybody can detect and blur the license plate in panorama image. These APIs allow our client to use the power of Automatic License Plate detection from panorama Image and Finding ROI( Region of Interest) of License Plate as per the client requirement.
+Using these APIs anybody can detect and blur the license plate in street images or in panoramas. These APIs allow our client to use the power of Automatic License Plate detection from images and Finding ROI( Region of Interest) of License Plate as per the client requirement.
 This model has been implemented on Yolo_v5 model that effectively detect License Plate area by exploring each object region.
 
 <img src="./docs/images/license_2d.gif?raw=true" width="1000px" style="margin-left:auto;margin-right:auto"/>
@@ -312,6 +312,7 @@ To detect brands like petrol pumps, banks etc, try following API which gives con
 
 <img src="./docs/images/brand_box.png" alt="Markdown Monster icon"
      width="800px" style="margin-left:auto;margin-right:auto" />
+     
 <br>
 
 ## Brand Details
